@@ -1,23 +1,72 @@
 aid: arceo-labs
+
 name: Cyber Resilience
-description: 'Cyber Resilience is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://cyberresilience.com/wp-content/uploads/2026/01/homepage_hero_hero_xl_1-1.webp
+
+description: Cyber Resilience provides cyber insurance and cybersecurity risk management tools to enterprises, including risk quantification,
+  security investment prioritization, and multi‑entity portfolio risk assessment. Its solutions target risk managers, CISOs, and CFOs, offering
+  AI‑driven models that translate technical security posture into financial impact and 24/7 in‑house claims support.
+
 url: https://raw.githubusercontent.com/api-evangelist/arceo-labs/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-25 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-25'
+
 modified: '2026-09-25'
+
 tags:
-- Company
-apis: []
+- Cyber Insurance
+- Risk Management
+- Security Investment Prioritization
+- Multi‑Entity Risk
+- Enterprise Risk
+- CISO
+- CFO
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/arceo-labs-hosts.yml
+- type: Vendors
+  url: vendors/arceo-labs-vendors.yml
+- type: TrustCenter
+  url: https://trust.cyberresilience.com/
+- type: DomainSecurity
+  url: security/arceo-labs-domain-security.yml
 - type: Website
-  url: https://forgeglobal.com/arceo-labs_stock/
+  url: https://cyberresilience.com
+
+apis:
+- name: Cyber Resilience API
+  description: API reference for Cyber Resilience services as described on the company website.
+  humanURL: https://cyberresilience.com
+  aid: arceo-labs:cyber-resilience-api
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: Documentation pages are served as JavaScript-rendered HTML, preventing machine-readable spec discovery.
+  evidence:
+  - url: https://cyberresilience.com
+    status: 200
+  checked: 2026-09-25
+x-enrichment:
+  date: '2026-09-25'
+  status: enriched
+  artifacts_added: 4
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local

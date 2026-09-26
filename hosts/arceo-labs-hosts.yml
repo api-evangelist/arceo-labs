@@ -1,0 +1,81 @@
+generated: '2026-09-26'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 6
+  own: 5
+  other_domain: 0
+  platform: 1
+  roles:
+  - api
+  - other
+  - website
+hosts:
+- host: api.cyberresilience.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: cyberresilience.com
+  role: api
+  relation: own
+- host: building.cyberresilience.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: cyberresilience.com
+  role: other
+  relation: own
+- host: cyberresilience.com
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - contract-discovery
+  - well-known
+  types:
+  - Website
+  serves:
+  - docs
+  registrable_domain: cyberresilience.com
+  role: website
+  relation: own
+- host: forgeglobal.com
+  found_by:
+  - vendor-detect
+  types: []
+  serves:
+  - cdn
+  vendor: cloudflare
+  registrable_domain: forgeglobal.com
+  role: other
+  relation: platform
+- host: portal.cyberresilience.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: cyberresilience.com
+  role: other
+  relation: own
+- host: trust.cyberresilience.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types:
+  - TrustCenter
+  serves: []
+  registrable_domain: cyberresilience.com
+  role: other
+  relation: own
